@@ -35,6 +35,11 @@
              SelectedEntity = null;
              OnSelectedEntityChanged?.Invoke(null);
          }
+
+         if (Input.GetKeyDown(KeyCode.A) && SelectedEntity != null)
+         {
+             SelectedEntity.TakeDamage(10);
+         }
      }
 
      private void Start()
