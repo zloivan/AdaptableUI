@@ -1,12 +1,17 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Stats))]
 public class Entity : MonoBehaviour
 {
     public int CurrentHealth { get; private set; }
-    [SerializeField] private Stats stats;
-
+    [FormerlySerializedAs("stats")] public Stats Stats;
+    [SerializeField] private int initialHealth = 100;
+    public int InitialHealth => initialHealth;
+    public event Action<int> OnHealthChanged;
+    
+    
     public void TakeDamage(int amount)
     {
         CurrentHealth -= amount;
@@ -15,11 +20,11 @@ public class Entity : MonoBehaviour
 
     private void Start()
     {
-        if (stats == null)
+        if (Stats == null)
         {
-            stats = GetComponent<Stats>();
+            Stats = GetComponent<Stats>();
         }
 
-        CurrentHealth = stats.MaxHealth;
+        CurrentHealth = Stats.MaxHealth;
     }
 }
