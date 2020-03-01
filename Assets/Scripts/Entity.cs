@@ -25,6 +25,6 @@ public class Entity : MonoBehaviour
             Stats = GetComponent<Stats>();
         }
 
-        CurrentHealth = Stats.MaxHealth;
+        CurrentHealth = initialHealth;
     }
 }

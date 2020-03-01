@@ -26,7 +26,7 @@ public class UIController : MonoBehaviour
     {
         if (statsList != null)
         {
-            if (entity != null && entity.Stats != null)
+            if (entity.Stats != null)
             {
                 statsList.Bind(entity.Stats);
             }
@@ -34,10 +34,7 @@ public class UIController : MonoBehaviour
 
         if (healthPanel != null)
         {
-            if (entity != null)
-            {
-                healthPanel.Bind(entity);
-            }
+            healthPanel.Bind(entity);
         }
     }
 

@@ -3477,7 +3477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da674c0b5db14e1ba587a1ee1af56104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
+  Stats: {fileID: 486925273}
+  initialHealth: 150
 --- !u!136 &486925272
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8622,7 +8623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da674c0b5db14e1ba587a1ee1af56104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
+  Stats: {fileID: 1157383586}
+  initialHealth: 100
 --- !u!136 &1157383585
 CapsuleCollider:
   m_ObjectHideFlags: 0
